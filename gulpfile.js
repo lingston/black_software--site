@@ -69,7 +69,7 @@ exports.html=html;
 
 //script
 const scripts = () => {
-  return gulp.src("source/script/*.js")
+  return gulp.src("source/js/*.js")
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/script"))
@@ -122,6 +122,7 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
+    "source/jquery.mask.min.js",
     "source/*.ico",
     "source/img/**/*.svg",
     "source/img/icons/*.xml",

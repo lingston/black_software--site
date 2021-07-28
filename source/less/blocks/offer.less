@@ -1,0 +1,105 @@
+.offer {
+  background-color: black;
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 90vh;
+}
+
+.offer__logo {
+  background-image: url("../img/m-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 290px;
+  position: relative;
+  background-position-y: -45px;
+  top: calc(50% - 220px);
+  animation: threelist 2s 1 ease-in-out;
+  margin: 0 auto;
+
+  @media (min-width: 400px) {
+    min-height: 30%;
+    width: auto;
+  }
+}
+
+.offer__hide-big-words {
+  opacity: 0;
+  width: 100%;
+  min-height: 23vh;
+  background-color: black;
+  animation: bigwords 3s 1 ease-in-out;
+  position: relative;
+  top: 15.5vh;
+}
+
+.offer__hide-little-words {
+  opacity: 0;
+  width: 100%;
+  min-height: 22vh;
+  background-color: black;
+  animation: littlewords 3.7s 1 ease-in-out;
+  position: relative;
+  top: 8vh;
+}
+
+.offer__text {
+  color: white;
+  font-size: 16px;
+  font-family: "Baron Neue", "Arial", sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  position: absolute;
+  display: none;
+  padding: 0 3vw;
+
+  @media (max-width: 400px) {
+    font-size: 14px;
+    top: 40vh;
+  }
+}
+
+.offer__down {
+  position: relative;
+  top: 33vh;
+  width: 100%;
+  display: none;
+}
+
+.offer__down-text {
+  font-family: "Inter-Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 14px;
+  color: white;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: 400px) {
+    font-size: 16px;
+  }
+}
+
+.offer__down-icon {
+  background-image: url("../img/pointer-down.svg");
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding-bottom: 5vh;
+}
+
+.offer__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

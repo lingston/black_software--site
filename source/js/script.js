@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   //анимация поднимает logo вверх.
   setTimeout(function() {
-      $('.offer__logo').animate({
+      $('.offer__logo-mobile').animate({
           top: 10 + 'px'
       }, 1000);
   }, 4000);

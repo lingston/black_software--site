@@ -5,44 +5,70 @@
   background-repeat: no-repeat;
   width: 100vw;
   height: 90vh;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 }
 
-.offer__logo {
+.offer__logo-mobile {
   background-image: url("../img/m-logo.png");
-  background-size: cover;
+  background-size: 105%;
   background-position: center;
   background-repeat: no-repeat;
   width: 290px;
   position: relative;
   background-position-y: -45px;
-  top: calc(50% - 220px);
+  top: calc(50% - 225px);
   animation: threelist 2s 1 ease-in-out;
   margin: 0 auto;
 
-  @media (min-width: 400px) {
-    min-height: 30%;
+  @media (min-width: 414px) {
+    height: 75vw;
     width: auto;
+    background-size: 85%;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.offer__logo-desktop {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    background-image: url("../img/m-logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 290px;
+    position: relative;
+    background-position-y: -45px;
+    top: calc(50% - 220px);
+    animation: threelist 2s 1 ease-in-out;
+    margin: 0 auto;
   }
 }
 
 .offer__hide-big-words {
   opacity: 0;
   width: 100%;
-  min-height: 23vh;
+  height: 50vw;
   background-color: black;
   animation: bigwords 3s 1 ease-in-out;
   position: relative;
-  top: 15.5vh;
 }
 
 .offer__hide-little-words {
   opacity: 0;
   width: 100%;
-  min-height: 22vh;
+  height: 50vw;
   background-color: black;
-  animation: littlewords 3.7s 1 ease-in-out;
+  animation: littlewords 3.5s 1 ease-in-out;
   position: relative;
-  top: 8vh;
 }
 
 .offer__text {
@@ -62,10 +88,10 @@
 }
 
 .offer__down {
-  position: relative;
-  top: 33vh;
+  position: absolute;
   width: 100%;
   display: none;
+  bottom: 2%;
 }
 
 .offer__down-text {

@@ -1,8 +1,7 @@
 .offer {
-  background-color: black;
-  background-image: none;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("../img/bg.jpg");
   width: 100vw;
   height: 90vh;
   margin: 0;
@@ -12,17 +11,25 @@
   }
 }
 
-.offer__logo-mobile {
+.offer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 2;
+  animation: background-anim 12s ease-out;
+}
+
+.offer__logo {
   background-image: url("../img/m-logo.png");
   background-size: 105%;
   background-position: center;
   background-repeat: no-repeat;
-  width: 290px;
+  z-index: 3;
   position: relative;
-  background-position-y: -45px;
-  top: calc(50% - 225px);
-  animation: threelist 2s 1 ease-in-out;
-  margin: 0 auto;
 
   @media (min-width: 414px) {
     height: 75vw;
@@ -31,24 +38,22 @@
   }
 
   @media (min-width: 768px) {
-    display: none;
+    background-image: url("../img/logo.png");
+    background-size: 45%;
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    height: 50%;
+    //background-color: blue;
+    animation: logodesktop 2.7s 1 ease-in-out;
   }
 }
 
-.offer__logo-desktop {
-  display: none;
-
-  @media (min-width: 768px) {
-    display: block;
-    background-image: url("../img/m-logo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media (max-width: 767px) {
+  .offer__logo--animation-mobile {
+    animation: logomobile 2s 1 ease-in-out;
+    top: calc(50% - 225px);
     width: 290px;
-    position: relative;
     background-position-y: -45px;
-    top: calc(50% - 220px);
-    animation: threelist 2s 1 ease-in-out;
     margin: 0 auto;
   }
 }
@@ -58,8 +63,22 @@
   width: 100%;
   height: 50vw;
   background-color: black;
-  animation: bigwords 3s 1 ease-in-out;
   position: relative;
+
+  @media (min-width: 768px) {
+    background-color: black;
+    opacity: 0;
+    height: 50;
+    width: 50%;
+    left: 42%;
+    animation: bigwords-desktop 3.3s 1 ease-in-out;
+  }
+}
+
+@media (max-width: 767px) {
+  .offer__hide-big-words--mobile {
+    animation: bigwords 3s 1 ease-in-out;
+  }
 }
 
 .offer__hide-little-words {
@@ -67,8 +86,24 @@
   width: 100%;
   height: 50vw;
   background-color: black;
-  animation: littlewords 3.5s 1 ease-in-out;
   position: relative;
+
+  @media (min-width: 768px) {
+    opacity: 0;
+    background-color: black;
+    width: 50%;
+    left: 42%;
+    position: absolute;
+    height: 100%;
+    top: 77%;
+    animation: littlewords-desktop 4s 1 ease-out;
+  }
+}
+
+@media (max-width: 767px) {
+  .offer__hide-little-words--mobile {
+    animation: littlewords 3.5s 1 ease-in-out;
+  }
 }
 
 .offer__text {
@@ -80,10 +115,17 @@
   position: absolute;
   display: none;
   padding: 0 3vw;
+  z-index: 3;
 
   @media (max-width: 400px) {
     font-size: 14px;
     top: 40vh;
+  }
+
+  @media (min-width: 768px) {
+    //top: 55%;
+    font-size: 14px;
+    padding: 0 35%;
   }
 }
 
@@ -92,6 +134,11 @@
   width: 100%;
   display: none;
   bottom: 2%;
+  z-index: 3;
+
+  @media (min-width: 768px) {
+    bottom: 0;
+  }
 }
 
 .offer__down-text {
@@ -107,6 +154,10 @@
   @media (min-width: 400px) {
     font-size: 16px;
   }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .offer__down-icon {
@@ -116,16 +167,11 @@
   background-repeat: no-repeat;
   margin: 0;
   padding-bottom: 5vh;
-}
 
-.offer__background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  @media (min-width: 768px) {
+    background-image: url("../img/pointer-down-desktop.svg");
+    padding-bottom: 0;
+    height: 100px;
+    background-size: 2.5%;
+  }
 }

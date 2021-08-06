@@ -1,24 +1,28 @@
 $( document ).ready(function() {
   //анимация поднимает logo вверх.
   setTimeout(function() {
-      $('.offer__logo-mobile').animate({
+    if(~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform)) {
+      // сюда вставляете Ваш скрипт
+      $('.offer__logo--animation-mobile').animate({
           top: 10 + 'px'
       }, 1000);
+    }
   }, 4000);
+
 
   //Появление первого блока
   setTimeout(function() {
     $('.offer__text--one').fadeIn('slow', function(){
         $('.offer__text--one').css('display', 'block')
     });
-}, 5000);
+}, 4850);
 
   // Скрываем первый блок
 setTimeout(function() {
     $('.offer__text--one').animate({
         opacity: 0
     }, 1000)
-}, 8000);
+}, 6700);
 
 // Появление второго блока
 setTimeout(function() {
@@ -27,14 +31,14 @@ setTimeout(function() {
             opacity: 1
         }, 1000)
     });
-}, 9500);
+}, 8200);
 
  //Появление background
- setTimeout(function() {
-  $('.offer').fadeIn('slow', function(){
+ /*  setTimeout(function() {
+  $('.offer').fadeIn(500, function(){
     $('.offer').css('background-image','url("../img/bg.jpg")')
   });
-}, 13000);
+}, 13000);*/
 
 //Появление указателя внизу экрана
 setTimeout(function() {
@@ -48,8 +52,8 @@ setTimeout(function() {
           opacity: 1
       }, 2000)
   });
-}, 11000);*/
-
+}, 11000);
+*/
 });
 
 //эффект hover в мобильной версии

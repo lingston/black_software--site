@@ -186,6 +186,19 @@
   }
 }
 
+.work__example--yourlogo {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    background-image: url("../img/your-logo.png");
+    background-size: 60%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
+
 .work__example--map {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -193,9 +206,7 @@
   background-size: cover;
 
   @media (min-width: 768px) {
-    background-image: url("../img/your-logo.png");
-    background-size: 60%;
-    background-position: 50% 40%;
+    display: none;
   }
 }
 
@@ -248,18 +259,6 @@
 .work__description--contact {
   font-size: 12px;
   line-height: 15px;
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.work__description--yourlogo {
-  display: none;
-
-  @media (min-width: 768px) {
-    display: flex;
-  }
 }
 
 .work__description-title {

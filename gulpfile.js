@@ -125,7 +125,8 @@ const copy = (done) => {
     "source/jquery.mask.min.js",
     "source/*.ico",
     "source/img/**/*.svg",
-    "source/img/icons/*.xml",
+    "source/*.xml",
+    "source/*.png",
     "source/img/icons/*.webmanifest",
     "!source/img/icons/*.svg"
   ], {
